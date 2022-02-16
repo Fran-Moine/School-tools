@@ -1,0 +1,122 @@
+:root {
+    font-family: 'Courier New', Courier, monospace;
+    --backgrnd-clr: linear-gradient(315deg, hsl(45, 100%, 33%), hsl(170, 100%, 33%));
+    --backgrnd-box: rgba(255, 255, 255, .4);
+    --btn-hvr-clr: hsla(0, 100%, 100%, .8);
+    --ui-backgrnd-clr: hsl(245, 33%, 25%);
+    --transition-speed: 200ms;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+
+}
+
+.mainform {
+    margin: 5px 1%;
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: var(--backgrnd-box);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.head2 {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    margin: 25px 15%;
+    background: linear-gradient(45deg, hsl(0, 20%, 50%), hsl(120, 20%, 50%), hsl(240, 20%, 50%));
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.head3 {
+    background: var(--backgrnd-box);
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 20px 25%;
+}
+
+.container-ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 20vh);
+    column-gap: 25px;
+}
+
+.container-ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-ul li > * {
+    margin: 5px 0;
+    padding: 0 2px;
+
+}
+
+.container-ul li > label {
+    border-radius: 5px;
+    background: var(--backgrnd-box);
+}
+
+.btn-calc {
+    margin: 1rem 25%;
+    padding: 5px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: 200ms;
+    background: var(--backgrnd-box);
+}
+
+.btn-calc:hover {
+    background-color: var(--btn-hvr-clr) ;
+}
+
+.btn-calc:active {
+    transform: rotate(1deg);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+#results {
+    background-color: var(--backgrnd-box);
+    border-radius: 10px;
+    margin: 20px 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 20%);
+}
+
+#results > * {
+    background-color: var(--backgrnd-box);
+    border-radius: 10px;
+    margin: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#results div > * {
+    padding: 1.5em;
+    
+}
+
+.triangulo-dp {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#canv-tdp {
+    border: 1px solid black;
+}
